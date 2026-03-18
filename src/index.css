@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --border: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 0 0% 89.8%;
+    --radius: 0.5rem;
+  }
+  body {
+    @apply bg-[#FFF9EA] text-foreground font-sans;
+  }
+}
+@layer components {
+  .btn-playful {
+    @apply inline-flex items-center justify-center font-bold border-4 border-black rounded-2xl shadow-playful transition-all duration-200 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .card-playful {
+    @apply bg-white border-4 border-black rounded-[2.5rem] shadow-playful p-6 md:p-8;
+  }
+  .input-playful {
+    @apply bg-white border-4 border-black rounded-2xl p-4 font-bold focus:outline-none focus:ring-4 focus:ring-playful-blue/20 transition-all;
+  }
+}
